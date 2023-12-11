@@ -1,0 +1,453 @@
+[
+  {
+    "allowHostDirVolumePlugin": false,
+    "allowHostIPC": false,
+    "allowHostNetwork": false,
+    "allowHostPID": false,
+    "allowHostPorts": false,
+    "allowPrivilegeEscalation": true,
+    "allowPrivilegedContainer": false,
+    "allowedCapabilities": null,
+    "apiVersion": "security.openshift.io/v1",
+    "defaultAddCapabilities": null,
+    "fsGroup": {
+      "type": "RunAsAny"
+    },
+    "metadata": {
+      "name": "anyuid"
+    },
+    "priority": 10,
+    "readOnlyRootFilesystem": false,
+    "requiredDropCapabilities": [
+      "MKNOD"
+    ],
+    "runAsUser": {
+      "type": "RunAsAny"
+    },
+    "seLinuxContext": {
+      "type": "MustRunAs"
+    },
+    "supplementalGroups": {
+      "type": "RunAsAny"
+    },
+    "volumes": [
+      "configMap",
+      "downwardAPI",
+      "emptyDir",
+      "persistentVolumeClaim",
+      "projected",
+      "secret"
+    ]
+  },
+  {
+    "allowHostDirVolumePlugin": true,
+    "allowHostIPC": true,
+    "allowHostNetwork": true,
+    "allowHostPID": true,
+    "allowHostPorts": true,
+    "allowPrivilegeEscalation": true,
+    "allowPrivilegedContainer": false,
+    "allowedCapabilities": null,
+    "apiVersion": "security.openshift.io/v1",
+    "defaultAddCapabilities": null,
+    "fsGroup": {
+      "type": "MustRunAs"
+    },
+    "metadata": {
+      "name": "hostaccess"
+    },
+    "priority": null,
+    "readOnlyRootFilesystem": false,
+    "requiredDropCapabilities": [
+      "KILL",
+      "MKNOD",
+      "SETUID",
+      "SETGID"
+    ],
+    "runAsUser": {
+      "type": "MustRunAsRange"
+    },
+    "seLinuxContext": {
+      "type": "MustRunAs"
+    },
+    "supplementalGroups": {
+      "type": "RunAsAny"
+    },
+    "volumes": [
+      "configMap",
+      "downwardAPI",
+      "emptyDir",
+      "hostPath",
+      "persistentVolumeClaim",
+      "projected",
+      "secret"
+    ]
+  },
+  {
+    "allowHostDirVolumePlugin": true,
+    "allowHostIPC": false,
+    "allowHostNetwork": false,
+    "allowHostPID": false,
+    "allowHostPorts": false,
+    "allowPrivilegeEscalation": true,
+    "allowPrivilegedContainer": false,
+    "allowedCapabilities": null,
+    "apiVersion": "security.openshift.io/v1",
+    "defaultAddCapabilities": null,
+    "fsGroup": {
+      "type": "RunAsAny"
+    },
+    "metadata": {
+      "name": "hostmount-anyuid"
+    },
+    "priority": null,
+    "readOnlyRootFilesystem": false,
+    "requiredDropCapabilities": [
+      "MKNOD"
+    ],
+    "runAsUser": {
+      "type": "RunAsAny"
+    },
+    "seLinuxContext": {
+      "type": "MustRunAs"
+    },
+    "supplementalGroups": {
+      "type": "RunAsAny"
+    },
+    "volumes": [
+      "configMap",
+      "downwardAPI",
+      "emptyDir",
+      "hostPath",
+      "nfs",
+      "persistentVolumeClaim",
+      "projected",
+      "secret"
+    ]
+  },
+  {
+    "allowHostDirVolumePlugin": false,
+    "allowHostIPC": false,
+    "allowHostNetwork": true,
+    "allowHostPID": false,
+    "allowHostPorts": true,
+    "allowPrivilegeEscalation": true,
+    "allowPrivilegedContainer": false,
+    "allowedCapabilities": null,
+    "apiVersion": "security.openshift.io/v1",
+    "defaultAddCapabilities": null,
+    "fsGroup": {
+      "type": "MustRunAs"
+    },
+    "metadata": {
+      "name": "hostnetwork"
+    },
+    "priority": null,
+    "readOnlyRootFilesystem": false,
+    "requiredDropCapabilities": [
+      "KILL",
+      "MKNOD",
+      "SETUID",
+      "SETGID"
+    ],
+    "runAsUser": {
+      "type": "MustRunAsRange"
+    },
+    "seLinuxContext": {
+      "type": "MustRunAs"
+    },
+    "supplementalGroups": {
+      "type": "MustRunAs"
+    },
+    "volumes": [
+      "configMap",
+      "downwardAPI",
+      "emptyDir",
+      "persistentVolumeClaim",
+      "projected",
+      "secret"
+    ]
+  },
+  {
+    "allowHostDirVolumePlugin": true,
+    "allowHostIPC": false,
+    "allowHostNetwork": true,
+    "allowHostPID": false,
+    "allowHostPorts": false,
+    "allowPrivilegeEscalation": true,
+    "allowPrivilegedContainer": false,
+    "allowedCapabilities": null,
+    "apiVersion": "security.openshift.io/v1",
+    "defaultAddCapabilities": null,
+    "fsGroup": {
+      "type": "MustRunAs"
+    },
+    "metadata": {
+      "name": "machine-api-termination-handler",
+      "ownerReferences": [
+        {
+          "apiVersion": "config.openshift.io/v1",
+          "kind": "ClusterVersion",
+          "name": "version",
+          "uid": "197ae120-b20a-462c-a6b8-953d31d35bfc"
+        }
+      ]
+    },
+    "priority": null,
+    "readOnlyRootFilesystem": false,
+    "requiredDropCapabilities": [
+      "KILL",
+      "MKNOD",
+      "SETUID",
+      "SETGID"
+    ],
+    "runAsUser": {
+      "type": "RunAsAny"
+    },
+    "seLinuxContext": {
+      "type": "MustRunAs"
+    },
+    "supplementalGroups": {
+      "type": "MustRunAs"
+    },
+    "volumes": [
+      "downwardAPI",
+      "hostPath"
+    ]
+  },
+  {
+    "allowHostDirVolumePlugin": false,
+    "allowHostIPC": false,
+    "allowHostNetwork": true,
+    "allowHostPID": false,
+    "allowHostPorts": false,
+    "allowPrivilegeEscalation": true,
+    "allowPrivilegedContainer": false,
+    "allowedCapabilities": [
+      "BPF",
+      "PERFMON",
+      "NET_ADMIN",
+      "SYS_RESOURCE"
+    ],
+    "apiVersion": "security.openshift.io/v1",
+    "defaultAddCapabilities": null,
+    "fsGroup": {
+      "type": "RunAsAny"
+    },
+    "metadata": {
+      "name": "netobserv-ebpf-agent",
+      "ownerReferences": [
+        {
+          "apiVersion": "flows.netobserv.io/v1beta1",
+          "blockOwnerDeletion": true,
+          "controller": true,
+          "kind": "FlowCollector",
+          "name": "cluster",
+          "uid": "20c04e70-52eb-47f2-9ec9-531d34fdcad5"
+        }
+      ]
+    },
+    "priority": null,
+    "readOnlyRootFilesystem": false,
+    "requiredDropCapabilities": null,
+    "runAsUser": {
+      "type": "RunAsAny"
+    },
+    "seLinuxContext": {
+      "type": "RunAsAny"
+    },
+    "supplementalGroups": {
+      "type": "RunAsAny"
+    },
+    "volumes": [
+      "awsElasticBlockStore",
+      "azureDisk",
+      "azureFile",
+      "cephFS",
+      "cinder",
+      "configMap",
+      "csi",
+      "downwardAPI",
+      "emptyDir",
+      "ephemeral",
+      "fc",
+      "flexVolume",
+      "flocker",
+      "gcePersistentDisk",
+      "gitRepo",
+      "glusterfs",
+      "iscsi",
+      "nfs",
+      "persistentVolumeClaim",
+      "photonPersistentDisk",
+      "portworxVolume",
+      "projected",
+      "quobyte",
+      "rbd",
+      "scaleIO",
+      "secret",
+      "storageOS",
+      "vsphere"
+    ]
+  },
+  {
+    "allowHostDirVolumePlugin": true,
+    "allowHostIPC": false,
+    "allowHostNetwork": true,
+    "allowHostPID": true,
+    "allowHostPorts": true,
+    "allowPrivilegeEscalation": true,
+    "allowPrivilegedContainer": true,
+    "allowedCapabilities": null,
+    "apiVersion": "security.openshift.io/v1",
+    "defaultAddCapabilities": null,
+    "fsGroup": {
+      "type": "RunAsAny"
+    },
+    "metadata": {
+      "name": "node-exporter"
+    },
+    "priority": null,
+    "readOnlyRootFilesystem": false,
+    "requiredDropCapabilities": null,
+    "runAsUser": {
+      "type": "RunAsAny"
+    },
+    "seLinuxContext": {
+      "type": "RunAsAny"
+    },
+    "supplementalGroups": {
+      "type": "RunAsAny"
+    },
+    "volumes": [
+      "*"
+    ]
+  },
+  {
+    "allowHostDirVolumePlugin": false,
+    "allowHostIPC": false,
+    "allowHostNetwork": false,
+    "allowHostPID": false,
+    "allowHostPorts": false,
+    "allowPrivilegeEscalation": true,
+    "allowPrivilegedContainer": false,
+    "allowedCapabilities": null,
+    "apiVersion": "security.openshift.io/v1",
+    "defaultAddCapabilities": null,
+    "fsGroup": {
+      "type": "RunAsAny"
+    },
+    "metadata": {
+      "name": "nonroot"
+    },
+    "priority": null,
+    "readOnlyRootFilesystem": false,
+    "requiredDropCapabilities": [
+      "KILL",
+      "MKNOD",
+      "SETUID",
+      "SETGID"
+    ],
+    "runAsUser": {
+      "type": "MustRunAsNonRoot"
+    },
+    "seLinuxContext": {
+      "type": "MustRunAs"
+    },
+    "supplementalGroups": {
+      "type": "RunAsAny"
+    },
+    "volumes": [
+      "configMap",
+      "downwardAPI",
+      "emptyDir",
+      "persistentVolumeClaim",
+      "projected",
+      "secret"
+    ]
+  },
+  {
+    "allowHostDirVolumePlugin": true,
+    "allowHostIPC": true,
+    "allowHostNetwork": true,
+    "allowHostPID": true,
+    "allowHostPorts": true,
+    "allowPrivilegeEscalation": true,
+    "allowPrivilegedContainer": true,
+    "allowedCapabilities": [
+      "*"
+    ],
+    "allowedUnsafeSysctls": [
+      "*"
+    ],
+    "apiVersion": "security.openshift.io/v1",
+    "defaultAddCapabilities": null,
+    "fsGroup": {
+      "type": "RunAsAny"
+    },
+    "metadata": {
+      "name": "privileged"
+    },
+    "priority": null,
+    "readOnlyRootFilesystem": false,
+    "requiredDropCapabilities": null,
+    "runAsUser": {
+      "type": "RunAsAny"
+    },
+    "seLinuxContext": {
+      "type": "RunAsAny"
+    },
+    "seccompProfiles": [
+      "*"
+    ],
+    "supplementalGroups": {
+      "type": "RunAsAny"
+    },
+    "volumes": [
+      "*"
+    ]
+  },
+  {
+    "allowHostDirVolumePlugin": false,
+    "allowHostIPC": false,
+    "allowHostNetwork": false,
+    "allowHostPID": false,
+    "allowHostPorts": false,
+    "allowPrivilegeEscalation": true,
+    "allowPrivilegedContainer": false,
+    "allowedCapabilities": null,
+    "apiVersion": "security.openshift.io/v1",
+    "defaultAddCapabilities": null,
+    "fsGroup": {
+      "type": "MustRunAs"
+    },
+    "metadata": {
+      "name": "restricted"
+    },
+    "priority": null,
+    "readOnlyRootFilesystem": false,
+    "requiredDropCapabilities": [
+      "KILL",
+      "MKNOD",
+      "SETUID",
+      "SETGID"
+    ],
+    "runAsUser": {
+      "type": "MustRunAsRange"
+    },
+    "seLinuxContext": {
+      "type": "MustRunAs"
+    },
+    "supplementalGroups": {
+      "type": "RunAsAny"
+    },
+    "volumes": [
+      "configMap",
+      "downwardAPI",
+      "emptyDir",
+      "persistentVolumeClaim",
+      "projected",
+      "secret"
+    ]
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "SCClist": [
+    {
+      "name": "anyuid",
+      "users": [],
+      "groups": [
+        "system:cluster-admins"
+      ]
+    },
+    {
+      "name": "hostaccess",
+      "users": [],
+      "groups": []
+    },
+    {
+      "name": "hostmount-anyuid",
+      "users": [
+        "system:serviceaccount:openshift-infra:pv-recycler-controller"
+      ],
+      "groups": []
+    },
+    {
+      "name": "hostnetwork",
+      "users": [],
+      "groups": []
+    },
+    {
+      "name": "machine-api-termination-handler",
+      "users": [
+        "system:serviceaccount:openshift-machine-api:machine-api-termination-handler"
+      ],
+      "groups": []
+    },
+    {
+      "name": "netobserv-ebpf-agent",
+      "users": [
+        "system:serviceaccount:netobserv-privileged:netobserv-ebpf-agent"
+      ],
+      "groups": []
+    },
+    {
+      "name": "node-exporter",
+      "users": [],
+      "groups": []
+    },
+    {
+      "name": "nonroot",
+      "users": [],
+      "groups": []
+    },
+    {
+      "name": "privileged",
+      "users": [
+        "system:admin",
+        "system:serviceaccount:openshift-infra:build-controller"
+      ],
+      "groups": [
+        "system:cluster-admins",
+        "system:nodes",
+        "system:masters"
+      ]
+    },
+    {
+      "name": "restricted",
+      "users": [],
+      "groups": [
+        "system:authenticated"
+      ]
+    }
+  ]
+}
